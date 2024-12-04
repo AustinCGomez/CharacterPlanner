@@ -62,11 +62,17 @@ class AddCharacterFrame(customtkinter.CTkFrame):
         self.char_backstory.grid(row=11, column=0, padx=10, pady=5)
 
         #Submit Button when all fields are filled out.
-        self.SubmitButton = customtkinter.CTkButton(self, text="Submit")
+        #To-Do:
+        #1 - We need to validate the input of course.
+        #2 - We need to grey out the submit button till all files are marked.
+        #3 - Optional: Checkmark for the user to opt-out of a field that then greys out that text box.
+        self.SubmitButton = customtkinter.CTkButton(self, text="Submit", command = self.save_character_process)
         self.SubmitButton.grid(row=12,column=0)
 
+
+# Step 1: Get all of the values
     def save_character_process(self):
-        print("This will be a tough one haha")
+        print(self.char_eXP.get())
 
 
 
