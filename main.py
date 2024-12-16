@@ -1,4 +1,5 @@
 import customtkinter
+import json
 
 APP_NAME = "CharacterPlanner Version 1.0.0-PreAlpha"
 
@@ -70,9 +71,19 @@ class AddCharacterFrame(customtkinter.CTkFrame):
         self.SubmitButton.grid(row=12,column=0)
 
 
-# Step 1: Get all of the values
+# Step 1: We will need to get all of the values that will be processed into the json. 
+# Step 2: We will need to open a file and write those json values into it and then save it. 
+
+
     def save_character_process(self):
+        
+        print(self.char_full_name.get())
+        print(self.char_race.get())
+        print(self.char_class.get())
         print(self.char_eXP.get())
+        print(self.char_backstory.get("1.0",'end-1c'))
+        #print(self.char_alignment.get())
+        #print(self.char_backstory.get())
 
 
 
